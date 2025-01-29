@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Time-Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function highlightDay(dayId) {
+            // Remove highlight from previously selected row
+            let rows = document.querySelectorAll("tr");
+            rows.forEach(row => row.classList.remove("highlight"));
+
+            // Add highlight to the selected row
+            document.getElementById(dayId).classList.add("highlight");
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Interactive Weekly Time-Table</h1>
+
+    <!-- Hyperlinks for each day -->
+    <div class="day-links">
+        <a href="javascript:void(0);" onclick="highlightDay('Monday')">Monday</a>
+        <a href="javascript:void(0);" onclick="highlightDay('Tuesday')">Tuesday</a>
+        <a href="javascript:void(0);" onclick="highlightDay('Wednesday')">Wednesday</a>
+        <a href="javascript:void(0);" onclick="highlightDay('Thursday')">Thursday</a>
+        <a href="javascript:void(0);" onclick="highlightDay('Friday')">Friday</a>
+        <a href="javascript:void(0);" onclick="highlightDay('Saturday')">Saturday</a>
+        <a href="javascript:void(0);" onclick="highlightDay('Sunday')">Sunday</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>09:00 - 10:00 AM</th>
+            <th>10:00 - 11:00 AM</th>
+            <th>11:00 - 12:00 PM</th>
+            <th>12:00 - 01:00 PM</th>
+            <th class="lunch" colspan="2">01:00 - 02:00 PM</th>
+            <th>02:00 - 03:00 PM</th>
+            <th>03:00 - 04:00 PM</th>
+            <th>04:00 - 05:00 PM</th>
+            <th>05:00 - 06:00 PM</th>
+        </tr>
+        <tr id="Monday">
+            <td>Monday</td>
+            <td class="occupied">OOD</td>
+            <td class="occupied">OOD</td>
+            <td></td>
+            <td></td>
+            <td class="lunch" colspan="2">L</td>
+            <td class="occupied">TOC</td>
+            <td class="occupied">TOC</td>
+            <td class="occupied">S&S</td>
+            <td class="occupied">S&S</td>
+        </tr>
+        <tr id="Tuesday">
+            <td>Tuesday</td>
+            <td class="occupied">IT</td>
+            <td class="occupied">TOC</td>
+            <td class="occupied">CBOT</td>
+            <td class="occupied">CBOT</td>
+            <td class="lunch" colspan="2">U</td>
+            <td></td>
+            <td></td>
+            <td class="occupied">S&S</td>
+            <td class="occupied">S&S</td>
+        </tr>
+        <tr id="Wednesday">
+            <td>Wednesday</td>
+            <td class="occupied">JAVA LAB</td>
+            <td class="occupied">JAVA LAB</td>
+            <td class="occupied">JAVA LAB</td>
+            <td></td>
+            <td class="lunch" colspan="2">N</td>
+            <td class="occupied">CBOT</td>
+            <td class="occupied">CBOT</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="Thursday">
+            <td>Thursday</td>
+            <td class="occupied">IT LAB</td>
+            <td class="occupied">IT LAB</td>
+            <td class="occupied">IT LAB</td>
+            <td></td>
+            <td class="lunch" colspan="2">C</td>
+            <td></td>
+            <td></td>
+            <td class="occupied">OOD</td>
+            <td></td>
+        </tr>
+        <tr id="Friday">
+            <td>Friday</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="lunch" colspan="2">H</td>
+            <td></td>
+            <td></td>
+            <td class="occupied">IT</td>
+            <td class="occupied">IT</td>
+        </tr>
+        <tr id="Saturday">
+            <td>Saturday</td>
+            <td colspan="10" class="occupied">Holiday</td>
+        </tr>
+        <tr id="Sunday">
+            <td>Sunday</td>
+            <td colspan="10" class="occupied">Holiday</td>
+        </tr>
+    </table>
+
+</body>
+</html>
