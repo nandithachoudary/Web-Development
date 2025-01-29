@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.highlight {
+    border: 4px solid black !important; /* Highlight with green */
+}
+
+.occupied {
+    background-color: white;
+    font-weight: bold;
+    color: black;
+}
+
+.lunch {
+    background-color: #006400; /* Dark green for lunch */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.day-links {
+    margin-bottom: 20px;
+}
+
+.day-links a {
+    text-decoration: none;
+    margin: 5px;
+    padding: 10px;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.day-links a:hover {
+    background-color: #0056b3;
+}
