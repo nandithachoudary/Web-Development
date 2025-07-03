@@ -2,7 +2,7 @@
 						 ==================
 
 A responsive web-based portal to view, search, filter, and download alumni data of the University of Hyderabad.
-Combines a beautiful frontend with real-time web scraping on the backend.
+Combines frontend with real-time web scraping on the backend.
 
 Project Structure
 
