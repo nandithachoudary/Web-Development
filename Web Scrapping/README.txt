@@ -1,5 +1,5 @@
-									UoH Alumni Directory
-									 ==================
+						UoH Alumni Directory
+						 ==================
 
 A responsive web-based portal to view, search, filter, and download alumni data of the University of Hyderabad.
 Combines a beautiful frontend with real-time web scraping on the backend.
@@ -74,4 +74,3 @@ The browser interface will display:
 A searchable, filterable alumni table
 Statistics: total alumni, degrees, and year range
 Download and refresh buttons for live data
-
