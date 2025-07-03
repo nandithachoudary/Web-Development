@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UoH Alumni Directory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add PapaParse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>UoH Alumni Directory</h1>
+            </div>
+            <div class="actions">
+                <button id="refresh-data" class="btn primary">
+                    <i class="fas fa-sync-alt"></i> Refresh Data
+                </button>
+                <button id="download-csv" class="btn secondary">
+                    <i class="fas fa-download"></i> Download CSV
+                </button>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search by name, degree, or year...">
+                <button id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="filters">
+                <select id="year-filter">
+                    <option value="">All Years</option>
+                </select>
+                <select id="degree-filter">
+                    <option value="">All Degrees</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="status-container">
+            <div id="status-message">Loading alumni data...</div>
+            <div class="loader" id="loader"></div>
+        </div>
+
+        <div class="stats-container" id="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <div class="stat-info">
+                    <h3>Total Alumni</h3>
+                    <p id="total-count">-</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-user-graduate"></i>
+                <div class="stat-info">
+                    <h3>Unique Degrees</h3>
+                    <p id="degrees-count">-</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="stat-info">
+                    <h3>Year Range</h3>
+                    <p id="year-range">-</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container" id="alumni-container">
+            <table id="alumni-table">
+                <thead>
+                    <tr>
+                        <th data-sort="name">Name <i class="fas fa-sort"></i></th>
+                        <th data-sort="year">Graduation Year <i class="fas fa-sort"></i></th>
+                        <th data-sort="degree">Degree <i class="fas fa-sort"></i></th>
+                    </tr>
+                </thead>
+                <tbody id="alumni-data">
+                    <!-- Alumni data will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination" id="pagination">
+            <button id="prev-page" class="btn pagination-btn" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span id="page-info">Page 1 of 1</span>
+            <button id="next-page" class="btn pagination-btn" disabled>
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 University of Hyderabad Alumni Portal | Built by UoH Student</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
